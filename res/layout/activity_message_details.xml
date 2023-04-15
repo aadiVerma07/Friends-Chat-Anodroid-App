@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MessageDetails"
+    android:background="@drawable/background1">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@color/green"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10sp">
+
+        <ImageView
+            android:id="@+id/btnback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userprofile"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:padding="5sp"
+            android:src="@drawable/img_1"
+            app:civ_border_color="@color/black" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:text="ADiTYA"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclemsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linear2"
+        android:layout_below="@+id/linear1">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <EditText
+            android:id="@+id/usermsg"
+            android:layout_width="0sp"
+            android:layout_height="50sp"
+            android:layout_weight="5"
+           android:background="@drawable/messageboxbg"
+            android:hint="Type Message Here..."
+            android:inputType="textMultiLine"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0sp"
+            android:layout_height="50sp"
+            android:src="@drawable/ic_baseline_send_24"
+            android:layout_weight="1"
+            android:id="@+id/sendmsg"/>
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"/>
+        </RelativeLayout>
